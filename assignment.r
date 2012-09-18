@@ -34,9 +34,7 @@
 > ct1<-table (biofam$AgeGroup, biofam$a25)
 > ct1
 
- * 10. Fit a logistic regression for the probability to be married with a child and having
-left home at 25 years old in terms of the language of the questionnaire and the sex.
-Comment the results.*
+ * 10. Fit a logistic regression for the probability to be married with a child and having left home at 25 years old in terms of the language of the questionnaire and the sex. Comment the results.*
 > lg.gr<-glm (biofam$a25==6~biofam$plingu02+biofam$sex, family=binomial, data=biofam)
 > summary (lg.gr)
 > exp (lg.gr$coefficients)
